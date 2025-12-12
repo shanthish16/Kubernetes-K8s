@@ -40,10 +40,14 @@ users:
     token: ${KUBE_TOKEN}
 EOF
 
+                        # Move into repo directory that contains manifests
+                        cd Kubernetes-K8s
+
+                        # Apply Kubernetes manifests
                         kubectl apply -f manifests/
                     '''
                 }
             }
-        }
-    }
+        }
+    }
 }
