@@ -16,7 +16,6 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 withCredentials([string(credentialsId: 'K8sTokens', variable: 'KUBE_TOKEN')]) {
-
                     sh '''
                         mkdir -p $HOME/.kube
 
